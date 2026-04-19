@@ -55,6 +55,9 @@ Testing notes
   - Controller behavior using mocked dependencies.
   - Exchange rate client integration tests use either a test double or test server fixture.
 
+Postman Collection
+- Path to Postman collection file `Assets\appsettings.Development.json`
+
 Developer tips
 - Follow the domain validations in `Domain\Entities` when creating or mapping DTOs.
 - Preserve the uppercasing behavior of currency codes when reading/writing to stores or APIs.

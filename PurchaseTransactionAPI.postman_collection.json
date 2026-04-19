@@ -1,0 +1,327 @@
+{
+  "info": {
+    "_postman_id": "85e049f0-6ba6-45fb-a715-35e520350735",
+    "name": "PurchaseTransactionAPI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50832415",
+    "_collection_link": "https://go.postman.co/collection/50832415-85e049f0-6ba6-45fb-a715-35e520350735?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "api",
+      "item": [
+        {
+          "name": "Transactions",
+          "item": [
+            {
+              "name": "{id}",
+              "item": [
+                {
+                  "name": "Retrieves a purchase transaction by ID with optional currency conversion.",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "text/plain"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/api/Transactions/:id?currencyCode=string",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "Transactions",
+                        ":id"
+                      ],
+                      "query": [
+                        {
+                          "key": "currencyCode",
+                          "value": "string",
+                          "description": "The target currency code for conversion (e.g., \"BRL\", \"EUR\", \"SEK\"). Optional."
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "a188846d-c87d-e450-4b6c-26695f041aa7",
+                          "description": "The unique identifier of the transaction to retrieve."
+                        }
+                      ]
+                    },
+                    "description": "This endpoint retrieves transaction details and converts monetary amounts to the specified\r\ncurrency if provided. If the transaction is not found or the currency code is invalid,\r\nappropriate error responses are returned."
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/Transactions/:id?currencyCode=string",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "Transactions",
+                            ":id"
+                          ],
+                          "query": [
+                            {
+                              "description": "The target currency code for conversion (e.g., \"BRL\", \"EUR\", \"SEK\"). Optional.",
+                              "key": "currencyCode",
+                              "value": "string"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "a188846d-c87d-e450-4b6c-26695f041aa7",
+                              "description": "The unique identifier of the transaction to retrieve."
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "body": ""
+                    },
+                    {
+                      "name": "Bad Request",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "text/plain"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/Transactions/:id?currencyCode=string",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "Transactions",
+                            ":id"
+                          ],
+                          "query": [
+                            {
+                              "description": "The target currency code for conversion (e.g., \"BRL\", \"EUR\", \"SEK\"). Optional.",
+                              "key": "currencyCode",
+                              "value": "string"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "a188846d-c87d-e450-4b6c-26695f041aa7",
+                              "description": "The unique identifier of the transaction to retrieve."
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Bad Request",
+                      "code": 400,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 7097,\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}"
+                    },
+                    {
+                      "name": "Not Found",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "text/plain"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/Transactions/:id?currencyCode=string",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "Transactions",
+                            ":id"
+                          ],
+                          "query": [
+                            {
+                              "description": "The target currency code for conversion (e.g., \"BRL\", \"EUR\", \"SEK\"). Optional.",
+                              "key": "currencyCode",
+                              "value": "string"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "a188846d-c87d-e450-4b6c-26695f041aa7",
+                              "description": "The unique identifier of the transaction to retrieve."
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Not Found",
+                      "code": 404,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 7097,\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}"
+                    },
+                    {
+                      "name": "Method Not Allowed",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "text/plain"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/Transactions/:id?currencyCode=string",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "Transactions",
+                            ":id"
+                          ],
+                          "query": [
+                            {
+                              "description": "The target currency code for conversion (e.g., \"BRL\", \"EUR\", \"SEK\"). Optional.",
+                              "key": "currencyCode",
+                              "value": "string"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "a188846d-c87d-e450-4b6c-26695f041aa7",
+                              "description": "The unique identifier of the transaction to retrieve."
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Method Not Allowed",
+                      "code": 405,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 7097,\n  \"detail\": \"string\",\n  \"instance\": \"string\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Creates a new purchase transaction.",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"description\": \"string\",\n  \"transactionDate\": \"1960-03-07T01:03:31.297Z\",\n  \"amount\": 4668.632238577246\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/api/Transactions",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "Transactions"
+                  ]
+                },
+                "description": "This endpoint creates a new transaction and returns the created resource with its generated ID."
+              },
+              "response": [
+                {
+                  "name": "Created",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"description\": \"string\",\n  \"transactionDate\": \"1960-03-07T01:03:31.297Z\",\n  \"amount\": 4668.632238577246\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/Transactions",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "Transactions"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "body": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "/"
+    }
+  ]
+}
