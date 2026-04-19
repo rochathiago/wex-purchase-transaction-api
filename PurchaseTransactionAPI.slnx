@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="PurchaseTransactionAPI.csproj" />
+  <Project Path="Tests/PurchaseTransaction.UnitTests/PurchaseTransaction.Tests.csproj" Id="a49a4f92-bea2-47c6-a108-19570ff8634f" />
+</Solution>
