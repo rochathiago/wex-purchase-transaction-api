@@ -3,7 +3,7 @@ using PurchaseTransactionAPI.Application.Interfaces;
 using PurchaseTransactionAPI.Application.Persistence;
 using PurchaseTransactionAPI.Domain.Entities;
 
-namespace PurchaseTransactionAPI.Application;
+namespace PurchaseTransactionAPI.Infrastructure.Repositories;
 
 public class CurrencyRepository(AppDbContext _context) : ICurrencyRepository
 {

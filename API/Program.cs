@@ -3,7 +3,6 @@ using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using PurchaseTransactionAPI.API.Middlewares;
 using PurchaseTransactionAPI.API.Validators;
-using PurchaseTransactionAPI.Application;
 using PurchaseTransactionAPI.Application.ExternalServices;
 using PurchaseTransactionAPI.Application.ExternalServices.Treasury;
 using PurchaseTransactionAPI.Application.ExternalServices.Treasury.Options;
@@ -11,6 +10,7 @@ using PurchaseTransactionAPI.Application.Interfaces;
 using PurchaseTransactionAPI.Application.Persistence;
 using PurchaseTransactionAPI.Application.Repositories;
 using PurchaseTransactionAPI.Application.Services;
+using PurchaseTransactionAPI.Infrastructure.Repositories;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
